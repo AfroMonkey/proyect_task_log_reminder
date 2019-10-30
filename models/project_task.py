@@ -13,3 +13,13 @@ class ProjectTask(models.Model):
                     'message': _('Did you register your hours?'),
                 }
             }
+
+    @api.onchange('kanban_state')
+    def _on_change_stage(self):
+        if self._origin.kanban_state == 'normal' and self.kanban_state == 'done':
+            return {
+                'warning': {
+                    'title': _('Stage advanced'),
+                    'message': _('Did you register your hours?'),
+                }
+            }
