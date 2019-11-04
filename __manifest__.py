@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    'name': '121C',
-    'version': '1.0',
+    'name': 'Project Task Log Reminder',
+    'version': '12.0.1.1.0',
     'author': 'Humanytek',
     'website': 'http://humanytek.com',
     'depends': [
