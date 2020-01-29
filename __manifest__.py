@@ -20,7 +20,7 @@
 
 {
     'name': 'Project Task Log Reminder',
-    'version': '12.0.1.1.0',
+    'version': '12.0.1.1.1',
     'author': 'Humanytek',
     'website': 'http://humanytek.com',
     'depends': [

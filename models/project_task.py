@@ -5,7 +5,7 @@ class ProjectTask(models.Model):
     _inherit = 'project.task'
 
     @api.onchange('stage_id')
-    def _on_change_stage(self):
+    def _on_change_stage_id(self):
         if self._origin.stage_id.name == 'WIP' and self.stage_id.name == 'Review':
             return {
                 'warning': {
@@ -15,7 +15,7 @@ class ProjectTask(models.Model):
             }
 
     @api.onchange('kanban_state')
-    def _on_change_stage(self):
+    def _on_change_kanban_state(self):
         if self._origin.kanban_state == 'normal' and self.kanban_state == 'done':
             return {
                 'warning': {
